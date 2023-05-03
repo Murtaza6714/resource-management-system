@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- Navbar -->
+  <nav class="flex-shrink-0 bg-indigo-600">
+    <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <!-- Logo section -->
+        <div class="flex items-center px-2 lg:px-0 xl:w-64">
+          <div class="flex-shrink-0">
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-300.svg" alt="Workflow">
+          </div>
+        </div>
+
+        <!-- Search section -->
+
+        <div class="flex lg:hidden">
+          <!-- Mobile menu button -->
+          <button type="button" class="bg-indigo-600 inline-flex items-center justify-center p-2 rounded-md text-indigo-400 hover:text-white hover:bg-indigo-600 " aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+              Heroicon name: outline/menu-alt-1
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <img class="h-8 w-8 rounded-full" src="/public/img/ak.jpg" alt="">
+            </svg>
+            <!--
+              Icon when menu is open.
+              Heroicon name: outline/x
+              Menu open: "block", Menu closed: "hidden"
+            -->
+
+          </button>
+        </div>
+        <!-- Profile dropdown -->
+        <div class="ml-4 relative flex-shrink-0">
+          <div>
+            <button type="button" class="bg-indigo-700 flex text-sm rounded-full text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+              <span class="sr-only">Open user menu</span>
+              <img class="h-8 w-8 rounded-full" src="/public/img/ak.jpg" alt="">
+            </button>
+          </div>
+
+          <!--
+            Dropdown menu, show/hide based on menu state.
+            Entering: "transition ease-out duration-100"
+              From: "transform opacity-0 scale-95"
+              To: "transform opacity-100 scale-100"
+            Leaving: "transition ease-in duration-75"
+              From: "transform opacity-100 scale-100"
+              To: "transform opacity-0 scale-95"
+          -->
+          <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+            <!-- Active: "bg-gray-100", Not Active: "" -->
+            <a href="profile.html" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="lg:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <!-- Current: "text-white bg-indigo-800", Default: "text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600" -->
+        <a href="home.html" class="text-white bg-indigo-800 block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a>
+
+        <a href="lablist.html" class="text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600 block px-3 py-2 rounded-md text-base font-medium">Lab</a>
+      </div>
+      <div class="pt-4 pb-3 border-t border-indigo-800">
+        <div class="px-2 space-y-1">
+          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600">Your Profile</a>
+
+          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600">Settings</a>
+
+          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600">Sign out</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="px-4 sm:px-6 lg:px-8">
+    <div class="mt-8 flex flex-col">
+
+        <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:mx-20">
+            <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+              <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                <div class="px-4 py-5 sm:px-6 bg-gray-50">
+                    <h2 id="applicant-information-title" class="text-lg leading-6 font-medium text-gray-900">Labs Information</h2>
+                    <p class="mt-1 max-w-2xl text-sm text-gray-500">List of all Labs and labs detail</p>
+
+                  </div>
+              </div>
+            </div>
+        </div>
+
+      <div class="mt-2 -my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:mx-20">
+        <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+          <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+            <table class="min-w-full divide-y divide-gray-300">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Lab-name</th>
+                  <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">Lab-no.</th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Teacher-name</th>
+                  <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
+                    <span class="sr-only">View</span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 bg-white">
+
+                <% for (let index = 0; index < info.length; index++) {
+                  const element = info[index];
+                  
+                %> 
+                <tr>
+                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6"><%= element.lab_name.toUpperCase() %> </td>
+                    <td class="whitespace-nowrap px-3 py-4 text-center text-sm text-gray-500"><%= element.lid.toString().toUpperCase() %></td>
+                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= element.teacher_profile.name.toUpperCase() %></td>
+                    <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-start text-sm font-medium sm:pr-6">
+                      <span class="inline-flex items-center px-2.5  rounded-full py-0.5 text-xs font-medium bg-blue-800  text-white capitalize"> <a href="/comp">Component list</a> </span>
+                    </td>
+                  </tr>
+                  <% } %> 
+                <!-- More people... -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</body>
+</html>
